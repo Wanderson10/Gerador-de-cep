@@ -1,0 +1,144 @@
+.container{
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(#121212,#212b46);
+}
+
+.title{
+    font-size: 85px;
+    color: rgb(255, 255, 255);
+    animation: flipTittle 1s;
+}
+
+@keyframes flipTittle {
+    from{
+   transform: rotateX(90deg);
+    }
+    to{
+      transform: rotateX(0deg);
+    }
+}
+
+.containerInput{
+    background-color: rgb(121, 120, 120);
+    padding: 15px;
+    margin: 34px 0;
+    display:flex;
+    border-radius: 8px;
+    box-shadow: 1px 3px 8px rgba(0,0,0 , 0.5);
+}
+
+.containerInput input {
+    background-color: transparent;
+    border:0;
+    font-size: 20px;
+    color: #fff;
+    outline: none;
+    margin-right: 8px;
+
+}
+
+.containerInput input::placeholder{
+    color: rgb(218, 218, 218);
+}
+
+.buttonSearch{
+background-color: transparent;
+border:0;
+display: flex;
+align-items: center;
+cursor: pointer;
+transition: all 0.6s;
+}
+
+.buttonSearch :hover{
+    transform: scale(1.1);
+}
+
+@keyframes grow-and-shrink {
+    0% {
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(1.5);
+      }
+    
+}
+
+
+.main{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+background: linear-gradient(#ffffff,#d1ddff);
+width: 30%;
+border-radius: 8px;
+animation: grow-and-shrink 800ms;
+animation-timing-function: ease-in-out;
+animation-iteration-count: 2;
+animation-direction: alternate;
+
+}
+
+.main h2 {
+    margin: 16px 0;
+    font-size: 35px;
+
+}
+
+.main span{ 
+    margin-bottom: 16px;
+
+}
+
+@media (max-width: 620px){
+    .title{
+        font-size: 60px;
+    }
+
+    .main h2 {
+        margin: 16px 0;
+        font-size: 28px;
+    
+    }
+
+    .main{
+        width:60%;
+        min-height: 250px;
+    }
+}
+
+@media (max-width: 400px){
+    .title{
+        font-size: 34px;
+    }
+
+    .main h2 {
+        margin: 16px 0;
+        font-size: 20px;
+    
+    }
+
+    .main{
+        width:50%;
+        min-height: 200px;
+    }
+
+    .containerInput{
+        width:50%;
+    }
+
+    .containerInput input {
+        width:100%;
+    }
+
+    .containerInput input::placeholder{
+        font-size: 16px;
+    }
+    
+    
+}
